@@ -126,3 +126,13 @@ const completedProgress = ()=> {
 const resetProgress = () => {
     document.querySelector("#progressBarFull").style.width = 0
 }
+
+next_question.addEventListener("click",function(){
+    quiz.style.display="block";
+    //if (index < 4){
+    if(index !== MCQS.length-1){
+     index++;
+     changeProgress()
+     clearInterval(interval);
+     clearTimeout(timeout)
+     removeActive(option)
