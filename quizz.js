@@ -164,3 +164,40 @@ total_correct.style.display="block";
  }
 	
     });
+
+    let option=document.querySelectorAll(".choice_que");
+   for (let i=0; i<option.length;i++){
+   	option[i].setAttribute("onclick","optionSelected(this)");
+   }
+
+   
+   function optionSelected(answer){
+   	let UserAns = answer.textContent;
+   	let correctAns = MCQS[index].answer;
+   	if(UserAns === correctAns){
+   		answer.classList.add("active");
+   		answer.classList.add("correct");
+		console.log("answer is correct");
+		correct++;
+	}
+	else
+	{
+		let options = Array.from(option)
+
+    	options.forEach((op)=>{
+    		if(op.textContent === correctAns){
+    			op.classList.add('correct')
+    		}
+    	})
+		answer.classList.add("active");
+		answer.classList.add("incorrect");
+		console.log("answer is incorrect");
+		correct+= 0;
+	}
+   	clearInterval(interval);
+
+  	for(i = 0; i <= 3; i++)
+   	{
+   		choice_que[i].classList.add("disabled");
+   	} 
+}
