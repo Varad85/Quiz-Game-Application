@@ -75,3 +75,23 @@ let loadData=function(){
 	option4.innerText=MCQS[index].option4;
 	timer=0;
 }
+loadData();
+    continueBtn.addEventListener("click",function(){
+	quiz.style.display="block";
+	rules.style.display="none";
+	document.querySelector("#progressBarFull").style.display = "block"
+	total_correct.innerHTML= `${correct=0} of ${MCQS.length} questions`
+
+
+		timeout = setTimeout(()=>{
+
+		let options = Array.from(option)
+		options.forEach((op)=>{
+			op.classList.add('disabled')
+		})
+
+	},15000)
+
+    interval=setInterval(countDown,1000);
+	loadData();
+});
