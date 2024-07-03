@@ -136,3 +136,14 @@ next_question.addEventListener("click",function(){
      clearInterval(interval);
      clearTimeout(timeout)
      removeActive(option)
+
+     timeout = setTimeout(()=>{
+
+        let options = Array.from(option)
+        options.forEach((op)=>{
+            op.classList.add('disabled')
+        })
+
+    },15000);
+
+loadData(); 
