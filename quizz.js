@@ -48,3 +48,30 @@ exit.addEventListener("click",function(){
 	start.style.display="block";
 	rules.style.display="none";
 });
+
+let countDown=function(){
+
+	console.log(`Timer ${timer}`)
+	if (timer===15)
+	{
+		clearInterval(interval);
+		
+	}
+	else{
+		timer++;
+		time.innerText=timer;
+	}
+}
+let loadData=function(){
+	if(index === 4){
+		document.querySelector("#next_question").innerHTML = "Submit"
+	}
+	
+	questionNo.innerText=index+1+".";
+	questionText.innerText=MCQS[index].question;
+	option1.innerText=MCQS[index].option1;
+	option2.innerText=MCQS[index].option2;
+	option3.innerText=MCQS[index].option3;
+	option4.innerText=MCQS[index].option4;
+	timer=0;
+}
