@@ -147,3 +147,20 @@ next_question.addEventListener("click",function(){
     },15000);
 
 loadData(); 
+
+total_correct.style.display="block";
+ 	total_correct.innerHTML=`${correct} correct of ${MCQS.length} questions`;
+ 	clearInterval
+ 	interval=setInterval(countDown,1000);
+ 	
+ }
+ else{
+ 	index=0;
+ 	completedProgress()
+ 	clearInterval(interval);
+ 	quiz.style.display="none";
+ 	points.innerHTML=`You got ${correct} out of ${MCQS.length}`;
+ 	result.style.display="block";
+ }
+	
+    });
