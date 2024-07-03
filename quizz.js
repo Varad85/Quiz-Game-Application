@@ -95,3 +95,20 @@ loadData();
     interval=setInterval(countDown,1000);
 	loadData();
 });
+
+const removeActive = (option) => {
+    let options = Array.from(option)
+
+    options.forEach((op)=>{
+        op.classList.remove('disabled')
+        if(op.classList.contains('active')){
+            op.classList.remove('active')
+        }
+        if(op.classList.contains('correct')){
+            op.classList.remove('correct')
+        }
+        if(op.classList.contains('incorrect')){
+            op.classList.remove('incorrect')
+        }
+    })
+}
