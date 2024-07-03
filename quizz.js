@@ -201,3 +201,24 @@ total_correct.style.display="block";
    		choice_que[i].classList.add("disabled");
    	} 
 }
+
+quit.addEventListener("click",function(){
+    document.querySelector("#next_question").innerHTML = "Next"
+document.querySelector("#progressBarFull").style.display = "none"
+removeActive(option)
+clearTimeout(timeout)
+resetProgress()
+start.style.display="block";
+result.style.display="none";
+});
+
+
+restart.addEventListener("click",function(){
+document.querySelector("#next_question").innerHTML = "Next"
+document.querySelector("#progressBarFull").style.display = "none"
+removeActive(option)
+clearTimeout(timeout)
+resetProgress()
+rules.style.display="block";
+result.style.display="none";
+});
