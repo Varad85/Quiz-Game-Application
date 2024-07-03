@@ -38,3 +38,13 @@ let timeout;
 let correct=0;
 
 let que_count=0;
+
+start.addEventListener("click",function(){
+	start.style.display="none";
+	rules.style.display="block";
+});
+
+exit.addEventListener("click",function(){
+	start.style.display="block";
+	rules.style.display="none";
+});
