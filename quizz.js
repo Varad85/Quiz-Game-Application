@@ -112,3 +112,17 @@ const removeActive = (option) => {
         }
     })
 }
+
+const changeProgress = ()=> {
+    let width = parseInt(index*20)
+    document.querySelector("#progressBarFull").style.width = `${width}%`
+}
+
+const completedProgress = ()=> {
+    console.log("completed")
+        document.querySelector("#progressBarFull").style.width = `100%`
+}
+
+const resetProgress = () => {
+    document.querySelector("#progressBarFull").style.width = 0
+}
