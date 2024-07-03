@@ -266,3 +266,13 @@ body{
 #container #result button:hover{
 	background: #e91e63;
 }
+#progressBar{
+    width: 100%;
+    background-color: grey;
+  }
+  #progressBarFull{
+    width: 1%;
+    height: 30px;
+    background-color: green;
+  }
+  
